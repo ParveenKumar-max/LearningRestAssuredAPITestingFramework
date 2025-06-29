@@ -1,4 +1,4 @@
-package org.apitestinglearning;
+package org.apitestinglearning.Ex_01_RestAssured;
 
 import io.restassured.RestAssured;
 

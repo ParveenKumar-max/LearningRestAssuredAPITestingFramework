@@ -1,10 +1,10 @@
-package org.apitestinglearning;
+package org.apitestinglearning.Ex_02_BuilderPattern;
 
 import io.restassured.RestAssured;
 
 public class Ex_API_05_MutipleTCs {
 
-    // We will run multiple Test Case in a single file.
+    // We will run multiple Test Case in a single file, But it's not a scalable approach.
 
     public static void main(String[] args) {
 

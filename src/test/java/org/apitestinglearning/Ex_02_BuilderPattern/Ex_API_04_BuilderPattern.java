@@ -1,4 +1,4 @@
-package org.apitestinglearning;
+package org.apitestinglearning.Ex_02_BuilderPattern;
 
 public class Ex_API_04_BuilderPattern {
 
