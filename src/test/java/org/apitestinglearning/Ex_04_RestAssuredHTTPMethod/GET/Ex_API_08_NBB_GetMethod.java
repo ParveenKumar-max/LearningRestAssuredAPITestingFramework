@@ -1,4 +1,4 @@
-package org.apitestinglearning.Ex_04_RestAssuredHTTPMethod;
+package org.apitestinglearning.Ex_04_RestAssuredHTTPMethod.GET;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;

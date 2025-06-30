@@ -1,7 +1,6 @@
-package org.apitestinglearning.Ex_04_RestAssuredHTTPMethod;
+package org.apitestinglearning.Ex_04_RestAssuredHTTPMethod.GET;
 
 import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 public class Ex_API_07_BDD_GetMethod {
