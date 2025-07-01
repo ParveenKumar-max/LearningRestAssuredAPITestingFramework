@@ -5,8 +5,6 @@ import io.restassured.http.ContentType;
 import org.testng.annotations.Test;
 
 public class Ex_API_09_BDD_POSTMethod {
-
-
     @Test
     public void test_post_BDDmethod(){
 
@@ -36,8 +34,4 @@ public class Ex_API_09_BDD_POSTMethod {
 
 
     }
-
-
-
-
 }
