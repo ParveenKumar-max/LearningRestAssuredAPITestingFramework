@@ -6,4 +6,7 @@ REST ASSURED
 
 28-6-2025  --> BDD and Non- BDD style
 
-30-06-2025 --> All Http Method ( BDD & Non- BDD )
+30-06-2025 --> Get & Post,  Http Method ( BDD & Non- BDD )
+
+01-07-2025 --> Get, Post, Put, Del & Patch Http Method ( BDD & Non- BDD )
+
