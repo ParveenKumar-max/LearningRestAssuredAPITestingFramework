@@ -10,3 +10,5 @@ REST ASSURED
 
 01-07-2025 --> Get, Post, Put, Del & Patch Http Method ( BDD & Non- BDD )
 
+07-07-2025 --> RestAssured - TestNg Annotation ( Description, grouping, Enabled, Priority, InvocationCount, Parameter)
+
