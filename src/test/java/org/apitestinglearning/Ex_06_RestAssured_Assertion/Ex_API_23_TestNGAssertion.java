@@ -6,6 +6,7 @@ import org.testng.asserts.SoftAssert;
 
 public class Ex_API_23_TestNGAssertion {
 
+    /* Negative TC's for Hard and Soft assertion*/
 
     @Test
     public void test_hardAssertExample() {
