@@ -12,3 +12,5 @@ REST ASSURED
 
 07-07-2025 --> RestAssured - TestNg Annotation ( Description, grouping, Enabled, Priority, InvocationCount, Parameter)
 
+08-07-2025 -> RestAssured - Assertion with RestAssured, TestNG and Allure Report.
+
