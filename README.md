@@ -14,3 +14,5 @@ REST ASSURED
 
 08-07-2025 -> RestAssured - Assertion with RestAssured, TestNG and Allure Report.
 
+09-07-2025 -> RestAssured - AssertJ with TestNG assertion
+
