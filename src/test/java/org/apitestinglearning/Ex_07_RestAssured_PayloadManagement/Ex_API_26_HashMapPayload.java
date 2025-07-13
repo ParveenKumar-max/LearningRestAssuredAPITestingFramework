@@ -1,8 +1,5 @@
-package org.apitestinglearning.Ex_06_RestAssured_Assertion;
-// entry point for all assertThat methods and utility methods (e.g. entry)
+package org.apitestinglearning.Ex_07_RestAssured_PayloadManagement;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Owner;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
@@ -12,23 +9,21 @@ import org.hamcrest.Matchers;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static org.assertj.core.api.Assertions.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
-public class Ex_API_23_AssertJ {
+public class Ex_API_26_HashMapPayload {
 
     RequestSpecification RS;
     Response R;
     ValidatableResponse VR;
-    /* String token; As of now, there is no use but it will use when we work in PUT and PATCH method.*/
+    String token;
     Integer bookingID;
 
-
-    @Owner("Parveen")
-    @Description("TC1 -- Verifying firstname & lastname Non BDD format with allure report")
     @Test
-    public void test_assert01() {
+    public void hashmapPayload() {
 
-        String payload = "{\n" +
+     /*   String payload = "{\n" +
                 "    \"firstname\" : \"Parveen\",\n" +
                 "    \"lastname\" : \"Chaudhary\",\n" +
                 "    \"totalprice\" : 111,\n" +
@@ -39,12 +34,42 @@ public class Ex_API_23_AssertJ {
                 "    },\n" +
                 "    \"additionalneeds\" : \"Breakfast\"\n" +
                 "}";
+*/
+
+        // HashMap --> Kay & Value pair
+
+        Map<String, Object> bodyMap = new LinkedHashMap<>();
+        bodyMap.put("firstname","Parveen");
+        bodyMap.put("lastname","Chaudhary");
+        bodyMap.put("totalprice",111);
+        bodyMap.put("depositpaid",true);
+
+        // WE have another hashMap inside, so we need to create one more LinkedHashMap
+
+        Map<String,Object> bookingData = new LinkedHashMap<>();
+        bookingData.put("checkin","2018-01-01");
+        bookingData.put("checkout","2019-01-01");
+
+        bodyMap.put("bookingdates",bookingData);
+        bodyMap.put("additionalneeds","Breakfast");
+        System.out.println(bodyMap);
+
+
+        // Using HashMap, it will create a simple
+
+        //{firstname=Parveen, lastname=Chaudhary,
+        // totalprice=111, depositid=true,
+        // bookingdates={checkin=2019-01-01},
+        // aditionalneeds=Breakfast}
+
+        /* We can't load the HashMap value direct in RestAPI. so we need GSON repo. to convert it to
+        * actual JSON . Let me add in the respostrory   */
 
         RS = RestAssured.given();
         RS.baseUri("https://restful-booker.herokuapp.com");
         RS.basePath("/booking");
         RS.contentType(ContentType.JSON);
-        RS.body(payload).log().all();
+        RS.body(bodyMap).log().all();
 
         R = RS.when().post();
 
@@ -71,28 +96,8 @@ public class Ex_API_23_AssertJ {
         String Firstname = R.then().extract().path("booking.firstname");
         String Lastname = R.then().extract().path("booking.lastname");
 
-
-        // TestNG Assertions - 75%
-        // SoftAssert vs
-        // HardAssert -
-        // This means that if any assertion fails,
-        // the remaining statements in that test method will not be executed.
-
-        Assert.assertEquals(Firstname, "Parveen");
-        Assert.assertEquals(Lastname, "Chaudhary");
-        Assert.assertNotNull(bookingID);
-
-
-        // AssertJ( 3rd- Lib to Assertions) - 20%
-        assertThat(bookingID).isNotNull().isNotNegative().isNotZero();
-        assertThat(Firstname).isEqualTo("Parveen").isNotEmpty().isNotBlank();
-        assertThat(Lastname).isEqualTo("Chaudhary").isNotEmpty().isNotBlank();
-
-        //        String s = ""; //Empty
-        //        String s2 = " "; //Blank
+        Assert.assertEquals(Firstname,"Parveen");
 
 
     }
-
 }
-

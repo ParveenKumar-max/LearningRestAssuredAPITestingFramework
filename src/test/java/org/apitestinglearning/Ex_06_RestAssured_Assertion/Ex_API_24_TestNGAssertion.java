@@ -4,7 +4,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-public class Ex_API_23_TestNGAssertion {
+public class Ex_API_24_TestNGAssertion {
 
     /* Negative TC's for Hard and Soft assertion*/
 
@@ -12,7 +12,7 @@ public class Ex_API_23_TestNGAssertion {
     public void test_hardAssertExample() {
         System.out.println("Start of the program");
       //  Boolean is_neeru_male = false;
-        Assert.assertEquals("pramod","Pramod");
+        Assert.assertEquals("parveen","Parveen");
         System.out.println("End of the program");
 
     }
@@ -22,7 +22,7 @@ public class Ex_API_23_TestNGAssertion {
     @Test
     public void test_softAssertExample() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals("pramod","Pramod");
+        softAssert.assertEquals("parveen","Parveen");
         System.out.println("End of program");
         softAssert.assertAll();
     }

@@ -5,6 +5,8 @@
 
         <classes>
             <class name="org.apitestinglearning.Ex_06_RestAssured_Assertion.Ex_API_22_RestAssuredAssertion"></class>
+            <class name="org.apitestinglearning.Ex_06_RestAssured_Assertion.Ex_API_23_AssertJ"></class>
+            <class name="org.apitestinglearning.Ex_06_RestAssured_Assertion.Ex_API_24_TestNGAssertion"></class>
         </classes>
     </test>
 </suite>
