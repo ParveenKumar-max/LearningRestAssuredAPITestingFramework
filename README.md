@@ -18,3 +18,5 @@ REST ASSURED
 
 13-07-2025  --> RestAssured - AssertJ, Manage Payload ( String, Hashmap and POJO)
 
+14-07-2025  --> RestAssured - Payload Managment( String, Hashmap and POJO)
+
