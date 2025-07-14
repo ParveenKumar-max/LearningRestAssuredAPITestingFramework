@@ -16,3 +16,5 @@ REST ASSURED
 
 09-07-2025 -> RestAssured - AssertJ with TestNG assertion
 
+13-07-2025  --> RestAssured - AssertJ, Manage Payload ( String, Hashmap and POJO)
+
